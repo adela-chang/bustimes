@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Utilities.h"
 
-@interface LPPViewController : UIViewController
+@interface LPPViewController : UIViewController {
+    IBOutlet UITextView *info;
+}
+@property (nonatomic, retain) IBOutlet UITextView *info;
 
 @end

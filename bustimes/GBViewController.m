@@ -13,6 +13,8 @@
 @end
 
 @implementation GBViewController
+@synthesize info;
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -26,7 +28,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
+    Utilities *u = [[Utilities alloc] init];
+    [u setTextViewWithTags:info :2,55551,55559];
 }
 
 - (void)didReceiveMemoryWarning

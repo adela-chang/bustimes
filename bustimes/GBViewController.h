@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Utilities.h"
 
-@interface GBViewController : UIViewController
+@interface GBViewController : UIViewController {
+    IBOutlet UITextView *info;
+}
+@property (nonatomic, retain) IBOutlet UITextView *info;
 
 @end

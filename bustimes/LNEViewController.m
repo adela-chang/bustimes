@@ -6,13 +6,14 @@
 //  Copyright (c) 2013年 Adela Chang. All rights reserved.
 //
 
-#import "LNWViewController.h"
+#import "LNEViewController.h"
 
-@interface LNWViewController ()
+@interface LNEViewController ()
 
 @end
 
-@implementation LNWViewController
+@implementation LNEViewController
+@synthesize info;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -26,7 +27,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
+    Utilities *u = [[Utilities alloc] init];
+    [u setTextViewWithTags:info :3,57200,51072,55551];
+    
 }
 
 - (void)didReceiveMemoryWarning

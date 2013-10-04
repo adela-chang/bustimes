@@ -7,7 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Prediction.h"
 
-@interface Parser : NSObject
+@interface Parser: NSObject <NSXMLParserDelegate> {
+    NSMutableArray *arr;
+    Prediction *p;
+    BOOL storedp;
+    BOOL calculatedShuttles;
+    NSMutableString *stopTitle;
+}
+
+-(BOOL)parseDocumentWithURL:(NSURL *)url;
+-(NSMutableString *)returnParsedString;
+
 
 @end

@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreText/CoreText.h>
+#import "FUIButton.h"
 
 @interface ViewController : UIViewController
+
+@property (strong, nonatomic) IBOutlet UIButton *leaving;
 
 @end

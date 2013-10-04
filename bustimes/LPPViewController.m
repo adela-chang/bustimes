@@ -13,6 +13,7 @@
 @end
 
 @implementation LPPViewController
+@synthesize info;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -26,7 +27,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    Utilities *u = [[Utilities alloc] init];
+    [u setTextViewWithTags:info :2,50444,54588];
+    
 }
 
 - (void)didReceiveMemoryWarning

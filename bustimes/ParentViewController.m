@@ -1,20 +1,18 @@
 //
-//  GHViewController.m
+//  ParentViewController.m
 //  bustimes
 //
-//  Created by Adela Chang on 2013/09/19.
+//  Created by Adela Chang on 2013/09/30.
 //  Copyright (c) 2013年 Adela Chang. All rights reserved.
 //
 
-#import "GHViewController.h"
+#import "ParentViewController.h"
 
-@interface GHViewController ()
+@interface ParentViewController ()
 
 @end
 
-@implementation GHViewController
-@synthesize info;
-
+@implementation ParentViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -28,8 +26,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    Utilities *u = [[Utilities alloc] init];
-    [u setTextViewWithTags:info :2,53700,59555];
+    folderArr = [[NSArray alloc] init];
 }
 
 - (void)didReceiveMemoryWarning

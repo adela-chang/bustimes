@@ -8,6 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SettingsViewController : UIViewController
+@interface SettingsViewController : UIViewController {
+    IBOutlet UIPickerView * pickerView;
+    IBOutlet UIButton *save;
+    IBOutlet UIImageView *arrow;
+}
+
+
+@property (nonatomic, retain) IBOutlet UIPickerView *pickerView;
+@property (nonatomic, retain) IBOutlet UIButton *save;
+@property (nonatomic, retain) IBOutlet UIImageView *arrow;
 
 @end

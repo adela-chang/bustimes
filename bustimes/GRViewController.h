@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Utilities.h"
 
-@interface GRViewController : UIViewController
+
+@interface GRViewController : UIViewController {
+    IBOutlet UITextView *info;
+}
+@property (nonatomic, retain) IBOutlet UITextView *info;
 
 @end

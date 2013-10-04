@@ -8,6 +8,22 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Prediction : NSObject
+@interface Prediction : NSObject {
+    bool valid;
+    NSString *line;
+    NSString *dir;
+    int sec;
+    int min;
+}
+
+-(void)clear;
+-(NSString *) derivedSec;
+
+@property(nonatomic) bool arriving;
+@property(nonatomic) bool valid;
+@property(nonatomic) int sec;
+@property(nonatomic) int min;
+@property(nonatomic, retain) NSString *dir;
+@property(nonatomic, retain) NSString *line;
 
 @end

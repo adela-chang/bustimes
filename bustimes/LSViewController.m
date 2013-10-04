@@ -6,13 +6,15 @@
 //  Copyright (c) 2013年 Adela Chang. All rights reserved.
 //
 
-#import "TimesViewController.h"
+#import "LSViewController.h"
+#import "Parser.h"
 
-@interface TimesViewController ()
+@interface LSViewController ()
 
 @end
 
-@implementation TimesViewController
+@implementation LSViewController
+@synthesize info;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -26,8 +28,25 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    Utilities *u = [[Utilities alloc] init];
+    [u setTextViewWithTags:info :3,57200,54466,55555];
+
+
+ /*SOME CONVENIENT CODE TO SEE THE XML DOC WITH
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"http://webservices.nextbus.com/service/publicXMLFeed?command=predictions&a=actransit&stopId=55551"]
+                                                        cachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData
+                                                        timeoutInterval:10];
+    
+    [request setHTTPMethod: @"GET"];
+    
+    NSError *requestError;
+    NSURLResponse *urlResponse = nil;
+    
+    
+    NSData *response1 = [NSURLConnection sendSynchronousRequest:request returningResponse:&urlResponse error:&requestError];
+    NSLog(@"%@", [[NSString alloc] initWithData:response1 encoding:NSUTF8StringEncoding]);*/
 }
+
 
 - (void)didReceiveMemoryWarning
 {

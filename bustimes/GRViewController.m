@@ -13,6 +13,8 @@
 @end
 
 @implementation GRViewController
+@synthesize info;
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -26,7 +28,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    Utilities *u = [[Utilities alloc] init];
+    [u setTextViewWithTags:info :1,55593];
 }
 
 - (void)didReceiveMemoryWarning
