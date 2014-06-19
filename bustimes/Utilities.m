@@ -10,6 +10,7 @@
 
 @implementation Utilities
 
+//TODO: refactor methods out of utilities? no longer necessary after changes in data struct
 -(void)setTextViewWithTags:(UITextView*)t :(int)count, ... {
     va_list args;
     va_start(args, count);
