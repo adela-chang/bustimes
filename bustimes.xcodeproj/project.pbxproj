@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3807551D19537C0900225453 /* GoingHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3807551C19537C0900225453 /* GoingHomeViewController.m */; };
+		3807552119537D2500225453 /* DisplayBusLinesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3807551F19537D2500225453 /* DisplayBusLinesViewController.m */; };
+		3807552219537D2500225453 /* DisplayBusLinesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3807552019537D2500225453 /* DisplayBusLinesViewController.xib */; };
+		380755251953880100225453 /* LeavingHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 380755241953880100225453 /* LeavingHomeViewController.m */; };
+		3807552819538F3E00225453 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3807552619538F3E00225453 /* Icon@2x.png */; };
+		3807552919538F3E00225453 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3807552719538F3E00225453 /* Icon.png */; };
 		38933D0C18037B3600E6E4DD /* BusFolderController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38933D0A18037B3600E6E4DD /* BusFolderController.m */; };
 		38933D0D18037B3600E6E4DD /* BusFolderController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38933D0B18037B3600E6E4DD /* BusFolderController.xib */; };
 		389CCEDE1804A46A00964266 /* BusGroupController.m in Sources */ = {isa = PBXBuildFile; fileRef = 389CCEDC1804A46A00964266 /* BusGroupController.m */; };
@@ -70,6 +76,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3807551B19537C0900225453 /* GoingHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoingHomeViewController.h; sourceTree = "<group>"; };
+		3807551C19537C0900225453 /* GoingHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoingHomeViewController.m; sourceTree = "<group>"; };
+		3807551E19537D2500225453 /* DisplayBusLinesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisplayBusLinesViewController.h; sourceTree = "<group>"; };
+		3807551F19537D2500225453 /* DisplayBusLinesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DisplayBusLinesViewController.m; sourceTree = "<group>"; };
+		3807552019537D2500225453 /* DisplayBusLinesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DisplayBusLinesViewController.xib; sourceTree = "<group>"; };
+		380755231953880100225453 /* LeavingHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeavingHomeViewController.h; sourceTree = "<group>"; };
+		380755241953880100225453 /* LeavingHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeavingHomeViewController.m; sourceTree = "<group>"; };
+		3807552619538F3E00225453 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		3807552719538F3E00225453 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		38933D0918037B3600E6E4DD /* BusFolderController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusFolderController.h; sourceTree = "<group>"; };
 		38933D0A18037B3600E6E4DD /* BusFolderController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusFolderController.m; sourceTree = "<group>"; };
 		38933D0B18037B3600E6E4DD /* BusFolderController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BusFolderController.xib; sourceTree = "<group>"; };
@@ -168,6 +183,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3807551A19537B5000225453 /* old view controllers */ = {
+			isa = PBXGroup;
+			children = (
+				38AFD6EC17FF5720004B0893 /* GBViewController.h */,
+				38AFD6ED17FF5720004B0893 /* GBViewController.m */,
+				38AFD6EE17FF5720004B0893 /* GBViewController.xib */,
+				38AFD6EF17FF5720004B0893 /* GHViewController.h */,
+				38AFD6F017FF5720004B0893 /* GHViewController.m */,
+				38AFD6F117FF5720004B0893 /* GHViewController.xib */,
+				38AFD6F217FF5720004B0893 /* GRViewController.h */,
+				38AFD6F317FF5720004B0893 /* GRViewController.m */,
+				38AFD6F417FF5720004B0893 /* GRViewController.xib */,
+				38AFD6F517FF5720004B0893 /* GSViewController.h */,
+				38AFD6F617FF5720004B0893 /* GSViewController.m */,
+				38AFD6F717FF5720004B0893 /* GSViewController.xib */,
+				38AFD6F817FF5720004B0893 /* LNEViewController.h */,
+				38AFD6F917FF5720004B0893 /* LNEViewController.m */,
+				38AFD6FA17FF5720004B0893 /* LNEViewController.xib */,
+				38AFD6FB17FF5720004B0893 /* LPPViewController.h */,
+				38AFD6FC17FF5720004B0893 /* LPPViewController.m */,
+				38AFD6FD17FF5720004B0893 /* LPPViewController.xib */,
+				38AFD6FE17FF5720004B0893 /* LSViewController.h */,
+				38AFD6FF17FF5720004B0893 /* LSViewController.m */,
+				38AFD70017FF5720004B0893 /* LSViewController.xib */,
+			);
+			name = "old view controllers";
+			sourceTree = "<group>";
+		};
 		38FCC2BD17E2EAA00055F5A1 = {
 			isa = PBXGroup;
 			children = (
@@ -201,6 +244,8 @@
 		38FCC2CF17E2EAA10055F5A1 /* bustimes */ = {
 			isa = PBXGroup;
 			children = (
+				3807552619538F3E00225453 /* Icon@2x.png */,
+				3807552719538F3E00225453 /* Icon.png */,
 				38FCC2D817E2EAA10055F5A1 /* AppDelegate.h */,
 				38FCC2D917E2EAA10055F5A1 /* AppDelegate.m */,
 				38FCC2E117E2EAA10055F5A1 /* MainStoryboard_iPhone.storyboard */,
@@ -210,27 +255,14 @@
 				38AFD6DA17FF5720004B0893 /* CreateNewViewController.xib */,
 				38AFD6DB17FF5720004B0893 /* CustomButton.h */,
 				38AFD6DD17FF5720004B0893 /* CustomButton.m */,
-				38AFD6EC17FF5720004B0893 /* GBViewController.h */,
-				38AFD6ED17FF5720004B0893 /* GBViewController.m */,
-				38AFD6EE17FF5720004B0893 /* GBViewController.xib */,
-				38AFD6EF17FF5720004B0893 /* GHViewController.h */,
-				38AFD6F017FF5720004B0893 /* GHViewController.m */,
-				38AFD6F117FF5720004B0893 /* GHViewController.xib */,
-				38AFD6F217FF5720004B0893 /* GRViewController.h */,
-				38AFD6F317FF5720004B0893 /* GRViewController.m */,
-				38AFD6F417FF5720004B0893 /* GRViewController.xib */,
-				38AFD6F517FF5720004B0893 /* GSViewController.h */,
-				38AFD6F617FF5720004B0893 /* GSViewController.m */,
-				38AFD6F717FF5720004B0893 /* GSViewController.xib */,
-				38AFD6F817FF5720004B0893 /* LNEViewController.h */,
-				38AFD6F917FF5720004B0893 /* LNEViewController.m */,
-				38AFD6FA17FF5720004B0893 /* LNEViewController.xib */,
-				38AFD6FB17FF5720004B0893 /* LPPViewController.h */,
-				38AFD6FC17FF5720004B0893 /* LPPViewController.m */,
-				38AFD6FD17FF5720004B0893 /* LPPViewController.xib */,
-				38AFD6FE17FF5720004B0893 /* LSViewController.h */,
-				38AFD6FF17FF5720004B0893 /* LSViewController.m */,
-				38AFD70017FF5720004B0893 /* LSViewController.xib */,
+				3807551B19537C0900225453 /* GoingHomeViewController.h */,
+				3807551C19537C0900225453 /* GoingHomeViewController.m */,
+				380755231953880100225453 /* LeavingHomeViewController.h */,
+				380755241953880100225453 /* LeavingHomeViewController.m */,
+				3807551E19537D2500225453 /* DisplayBusLinesViewController.h */,
+				3807551F19537D2500225453 /* DisplayBusLinesViewController.m */,
+				3807552019537D2500225453 /* DisplayBusLinesViewController.xib */,
+				3807551A19537B5000225453 /* old view controllers */,
 				38AFD70117FF5720004B0893 /* ParentViewController.h */,
 				38AFD70217FF5720004B0893 /* ParentViewController.m */,
 				38AFD70417FF5720004B0893 /* ParentViewController.xib */,
@@ -382,12 +414,15 @@
 				38FCC2E017E2EAA10055F5A1 /* Default-568h@2x.png in Resources */,
 				38FCC2E317E2EAA10055F5A1 /* MainStoryboard_iPhone.storyboard in Resources */,
 				38AFD70E17FF5720004B0893 /* arrow.png in Resources */,
+				3807552219537D2500225453 /* DisplayBusLinesViewController.xib in Resources */,
 				38AFD72217FF5720004B0893 /* GRViewController.xib in Resources */,
 				38AFD71717FF5720004B0893 /* edited-red-arrow3.png in Resources */,
 				38AFD73117FF5720004B0893 /* SettingsViewController.xib in Resources */,
 				38AFD72D17FF5720004B0893 /* ParentViewController.xib in Resources */,
 				38AFD72817FF5720004B0893 /* LPPViewController.xib in Resources */,
 				38933D0D18037B3600E6E4DD /* BusFolderController.xib in Resources */,
+				3807552819538F3E00225453 /* Icon@2x.png in Resources */,
+				3807552919538F3E00225453 /* Icon.png in Resources */,
 				38AFD71017FF5720004B0893 /* circle-dashed-6-48.png in Resources */,
 				38AFD71617FF5720004B0893 /* edited-red-arrow2.png in Resources */,
 				38AFD70F17FF5720004B0893 /* circle-dashed-6-32.png in Resources */,
@@ -431,6 +466,7 @@
 				38AFD72B17FF5720004B0893 /* ParentViewController.m in Sources */,
 				38933D0C18037B3600E6E4DD /* BusFolderController.m in Sources */,
 				38AFD72317FF5720004B0893 /* GSViewController.m in Sources */,
+				3807552119537D2500225453 /* DisplayBusLinesViewController.m in Sources */,
 				38AFD72E17FF5720004B0893 /* Parser.m in Sources */,
 				38AFD71417FF5720004B0893 /* CustomButton.m in Sources */,
 				38AFD71F17FF5720004B0893 /* GHViewController.m in Sources */,
@@ -443,8 +479,10 @@
 				38AFD73217FF5720004B0893 /* Utilities.m in Sources */,
 				38AFD72917FF5720004B0893 /* LSViewController.m in Sources */,
 				38AFD72517FF5720004B0893 /* LNEViewController.m in Sources */,
+				3807551D19537C0900225453 /* GoingHomeViewController.m in Sources */,
 				38AFD71D17FF5720004B0893 /* GBViewController.m in Sources */,
 				38AFD72117FF5720004B0893 /* GRViewController.m in Sources */,
+				380755251953880100225453 /* LeavingHomeViewController.m in Sources */,
 				38FCC2E917E2EAA10055F5A1 /* ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

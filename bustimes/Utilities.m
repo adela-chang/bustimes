@@ -34,4 +34,24 @@
     return;
 }
 
++(void)setTextView: (UITextView*)t GivenStopIDs:(NSArray*)arr {
+    Parser* p = [[Parser alloc] init];
+    int value;
+    NSMutableAttributedString *retval = [[NSMutableAttributedString alloc] init];
+    
+    for(int i = 0; i < [arr count]; i++ ) {
+        value = [((NSNumber*) [arr objectAtIndex:i]) intValue];
+        NSString *s = [NSString stringWithFormat:@"http://webservices.nextbus.com/service/publicXMLFeed?command=predictions&a=actransit&stopId=%i", value];
+        if ([p parseDocumentWithURL:[NSURL URLWithString:s]] == NO)
+            NSLog(@"oh no");
+        NSMutableAttributedString *segment = [p returnParsedString];
+        
+        [retval appendAttributedString:segment];
+        [retval appendAttributedString:[[NSMutableAttributedString alloc] initWithString:@"\r"]];
+    }
+    
+    t.attributedText = retval;
+    return;
+}
+
 @end

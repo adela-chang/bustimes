@@ -12,5 +12,6 @@
 @interface Utilities : NSObject
 
 -(void)setTextViewWithTags:(UITextView *)t :(int)count, ...;
++(void)setTextView: (UITextView*)t GivenStopIDs:(NSArray*)arr;
 
 @end

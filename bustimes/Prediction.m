@@ -10,7 +10,6 @@
 
 @implementation Prediction
 
-
 // Compares two prediction objects based on arrival time
 - (NSComparisonResult)compare:(Prediction *)otherObject {
     if (self.sec < otherObject.sec) {

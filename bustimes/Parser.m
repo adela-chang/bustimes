@@ -11,6 +11,7 @@
 
 @implementation Parser
 
+#pragma mark - Main Methods
 -(BOOL)parseDocumentWithURL:(NSURL *)url {
     if (url == nil)
         return NO;
@@ -32,8 +33,39 @@
     return ok;
 }
 
+-(NSMutableAttributedString *)returnParsedString {
+    NSArray *sortedArray;
+    sortedArray = [predictions sortedArrayUsingSelector:@selector(compare:)];
+    NSMutableAttributedString *output = [[NSMutableAttributedString alloc] init];
+    [output appendAttributedString:[[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"%@\r\r", stopTitle]]];
+    
+    UIFont *boldFont = [UIFont systemFontOfSize:15];
+    NSRange boldedRange = NSMakeRange(0, [stopTitle length]);
+    [output beginEditing];
+    [output addAttribute:NSFontAttributeName
+                            value:boldFont
+                            range:boldedRange];
+    
+    [output endEditing];
+
+    for (int i = 0; i <[predictions count]; i++) {
+        Prediction *x = sortedArray[i];
+        if (x.valid == YES) {
+            NSMutableAttributedString *temp;
+            if (x.sec < 60)
+                temp = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"\tArriving, %@ %@\n", x.line,x.dir]];
+            else
+                temp = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"\t%i:%@, %@ %@\n", x.min,x.derivedSec,x.line,x.dir]];
+            [output appendAttributedString:temp];
+            
+        }
+    }
+    return output;
+}
+
+#pragma mark - NSXMLParserDelegate Methods
 -(void)parserDidStartDocument:(NSXMLParser *)parser {
-    arr = [[NSMutableArray alloc] init];
+    predictions = [[NSMutableArray alloc] init];
     storedp = NO;
     calculatedShuttles = NO;
     p = [[Prediction alloc] init];
@@ -44,6 +76,22 @@
     NSLog(@"didEndDocument");
 }
 
+
+/**
+ * AC transit XML predictions made using a stopID are in the form:
+    <body>
+        <predictions -- specifies bus line & tag>
+            <direction -- specifies direction of line>
+                <prediction -- specifies arriving time of specific bus>
+                <prediction -- specifies arriving time of specific bus>
+                ...
+            </direction>
+        </predictions>
+        <predictions -- another bus line that goes to this stop>
+            ...
+    </body>
+
+ */
 -(void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary *)attributeDict {
     //NSLog(@"didStartElement: %@", elementName);
     
@@ -77,8 +125,8 @@
                 NSInteger currentHour = [components hour];
                 if (currentHour > 6 && currentHour < 20) {
                     //NSLog(@"correct time");
-                    [arr addObject: [self shuttlePrediction:15 :0 :@"P Line"]];
-                    [arr addObject: [self shuttlePrediction:30 :5 :@"H Line"]];
+                    [predictions addObject: [self shuttlePrediction:15 :0 :@"P Line"]];
+                    [predictions addObject: [self shuttlePrediction:30 :5 :@"H Line"]];
                     calculatedShuttles = YES;
                 }
             }
@@ -102,7 +150,7 @@
             else if ([key isEqual:@"minutes"])
                 p.min = [value intValue];
         }
-        [arr addObject:p.copy];
+        [predictions addObject:p.copy];
         storedp = YES;
     }
     
@@ -121,29 +169,12 @@
     //NSLog(@"XMLParser error: %@", [validationError localizedDescription]);
 }
 
--(NSMutableString *)returnParsedString {
-    NSArray *sortedArray;
-    sortedArray = [arr sortedArrayUsingSelector:@selector(compare:)];
-    NSMutableString *output = [[NSMutableString alloc] init];
-    [output appendString:[NSMutableString stringWithFormat:@"%@\r\r", stopTitle]];
-    for (int i = 0; i <[arr count]; i++) {
-        Prediction *x = sortedArray[i];
-        if (x.valid == YES) {
-            NSMutableString *temp;
-            if (x.sec < 60)
-                temp = [NSMutableString stringWithFormat:@"\tArriving, %@ %@\n", x.line,x.dir];
-            else
-                temp = [NSMutableString stringWithFormat:@"\t%i:%@, %@ %@\n", x.min,x.derivedSec,x.line,x.dir];
-            [output appendString:temp];
 
-        }
-    }
-    return output;
-}
-
+#pragma mark - Helper Methods
+//method to manually adjust the time of predictions to account for the time which has probably elapsed between making the request to AC transit, parsing, and displaying results. also shaves off some extra time so users who procrastinate get a slight buffer and are less likely to run late ;)
 -(void)normalize {
-    for (int i = 0; i < [arr count]; i++) {
-        Prediction *item = arr[i];
+    for (int i = 0; i < [predictions count]; i++) {
+        Prediction *item = predictions[i];
         if (item.sec%60 < 20) {
             item.sec = item.sec+40;
             item.min = item.min-1;
