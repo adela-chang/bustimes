@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>8A2541B4-22B6-476A-8A3D-D5783BD2AA34</string>
+	<key>IDESourceControlProjectName</key>
+	<string>bustimes</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>72F7CB5C-28F9-4D96-95D5-CFA0A2B3770E</key>
+		<string>https://github.com/wooliao/bustimes.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>bustimes.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>72F7CB5C-28F9-4D96-95D5-CFA0A2B3770E</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/wooliao/bustimes.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>72F7CB5C-28F9-4D96-95D5-CFA0A2B3770E</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>72F7CB5C-28F9-4D96-95D5-CFA0A2B3770E</string>
+			<key>IDESourceControlWCCName</key>
+			<string>bustimes</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "BusFolderController.h"
 
 @interface ViewController ()
 
@@ -17,24 +18,20 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
     CALayer *btnLayer = [_leaving layer];
     [btnLayer setMasksToBounds:YES];
     [btnLayer setCornerRadius:5.0f];
     btnLayer.borderWidth = 1;
     btnLayer.borderColor = [UIColor lightGrayColor].CGColor;
 
-    
-    
-    FUIButton *newButton = [[FUIButton alloc] initWithFrame:(CGRectMake(100,100,100,30))];
-    newButton.buttonColor = [UIColor whiteColor];
-    newButton.shadowColor = [UIColor lightGrayColor];
-    newButton.shadowHeight = 1.0f;
-    newButton.cornerRadius = 6.0f;
-    newButton.titleLabel.font = [UIFont systemFontOfSize:16];
-    [newButton setTitleColor:[UIColor darkTextColor] forState:UIControlStateNormal];
-    [newButton setTitleColor:[UIColor darkTextColor] forState:UIControlStateHighlighted];
-    [self.view addSubview:newButton];
+}
 
+- (void) viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:YES];
+    
+    /*BusFolderController *viewControllerB = [[BusFolderController alloc] init];
+    [self presentViewController:viewControllerB animated:YES completion:NULL];*/
 
 }
 

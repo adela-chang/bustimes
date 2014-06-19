@@ -26,8 +26,34 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    folderArr = [[NSArray alloc] init];
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    int numFolders = [userDefaults integerForKey:@"numFolders"];
+    if (numFolders == 0) {
+        folderArr = [[NSMutableArray alloc] initWithObjects:@"main", nil];
+    } else {
+        folderArr = [[NSMutableArray alloc] initWithCapacity:numFolders];
+        NSString *name = @"main";
+    }
 }
+
+-(NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
+{
+    //One column
+    return 1;
+}
+
+-(NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
+{
+    //set number of rows
+    return folderArr.count;
+}
+
+-(NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
+{
+    //set item per row
+    return [folderArr objectAtIndex:row];
+}
+
 
 - (void)didReceiveMemoryWarning
 {

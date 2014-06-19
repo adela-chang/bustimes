@@ -76,6 +76,24 @@
             <point key="canvasLocation" x="-673" y="486"/>
         </scene>
         <!--View Controller-->
+        <scene sceneID="Zph-Q5-32e">
+            <objects>
+                <viewController id="NQZ-X5-7hg" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8o6-G4-TxE"/>
+                        <viewControllerLayoutGuide type="bottom" id="fIS-Vp-Ttq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uvR-kF-4yA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dY3-DG-5Bb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-896" y="1234"/>
+        </scene>
+        <!--View Controller-->
         <scene sceneID="5">
             <objects>
                 <viewController id="2" customClass="ViewController" sceneMemberID="viewController">
@@ -98,7 +116,7 @@
                                     <segue destination="L80-om-lxa" kind="modal" id="vjL-Hg-EeW"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="thb-NQ-2Np">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="thb-NQ-2Np" customClass="CustomButton">
                                 <rect key="frame" x="87" y="268" width="147" height="30"/>
                                 <state key="normal" title="Going Home">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -107,12 +125,10 @@
                                     <segue destination="wif-M5-1iB" kind="modal" id="CzV-ZJ-PEB"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8HC-p1-6Om">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8HC-p1-6Om" customClass="CustomButton">
                                 <rect key="frame" x="87" y="448" width="147" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" title="TESTING" backgroundImage="N/A">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="Testing"/>
                                 <connections>
                                     <segue destination="cI0-rB-uXd" kind="modal" id="qck-yz-GNY"/>
                                 </connections>
@@ -150,7 +166,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TPi-qZ-AO2">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TPi-qZ-AO2" customClass="CustomButton">
                                 <rect key="frame" x="101" y="123" width="118" height="30"/>
                                 <state key="normal" title="Sproul">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -159,7 +175,7 @@
                                     <segue destination="BPo-1g-7xp" kind="modal" id="Edv-w5-VjF"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yHl-FA-zYw">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yHl-FA-zYw" customClass="CustomButton">
                                 <rect key="frame" x="101" y="186" width="118" height="30"/>
                                 <state key="normal" title="RSF">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -168,7 +184,7 @@
                                     <segue destination="BZg-5Z-PAT" kind="modal" id="kCa-UZ-PgI"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G1b-I3-zwv">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G1b-I3-zwv" customClass="CustomButton">
                                 <rect key="frame" x="101" y="252" width="118" height="30"/>
                                 <state key="normal" title="Near Haas">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -177,7 +193,7 @@
                                     <segue destination="WBh-4a-aHe" kind="modal" id="gs2-o7-dgr"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H5z-dP-xTP">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H5z-dP-xTP" customClass="CustomButton">
                                 <rect key="frame" x="101" y="320" width="118" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="118" id="EZo-6D-5Jt"/>
@@ -243,7 +259,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nuz-D2-rV6">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nuz-D2-rV6" customClass="CustomButton">
                                 <rect key="frame" x="87" y="121" width="147" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="147" id="Sio-7K-Ysx"/>
@@ -255,7 +271,7 @@
                                     <segue destination="qaC-rm-mav" kind="modal" id="fm4-2C-bsY"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gzD-tN-ILu">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gzD-tN-ILu" customClass="CustomButton">
                                 <rect key="frame" x="87" y="197" width="147" height="30"/>
                                 <state key="normal" title="Northeast">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -264,7 +280,7 @@
                                     <segue destination="KyV-PC-BTn" kind="modal" id="8Nl-w2-svL"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DJG-OE-3zq">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DJG-OE-3zq" customClass="CustomButton">
                                 <rect key="frame" x="87" y="273" width="147" height="30"/>
                                 <state key="normal" title="Pigpen">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -821,7 +837,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KFD-2E-sCN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="411" y="1878"/>
+            <point key="canvasLocation" x="3" y="2076"/>
         </scene>
         <!--Msg View Controller-->
         <scene sceneID="5kZ-d1-Jjd">
@@ -854,11 +870,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p3o-50-ZiG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1035" y="2198"/>
+            <point key="canvasLocation" x="677" y="2166"/>
         </scene>
     </scenes>
     <resources>
-        <image name="N/A" width="48" height="48"/>
         <image name="arrow.png" width="145" height="180"/>
         <image name="circle-dashed-6-48.png" width="48" height="48"/>
     </resources>
@@ -868,9 +883,9 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="GRc-40-usD"/>
-        <segue reference="vjL-Hg-EeW"/>
         <segue reference="CzV-ZJ-PEB"/>
+        <segue reference="E9U-yB-kyN"/>
         <segue reference="A6T-Us-Z2R"/>
+        <segue reference="vjL-Hg-EeW"/>
     </inferredMetricsTieBreakers>
 </document>
